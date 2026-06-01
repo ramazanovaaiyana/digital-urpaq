@@ -81,7 +81,6 @@ async def cmd_link(message: types.Message):
 
 # Хитрый мини-сервер, который будет обманывать Render, притворяясь веб-сайтом
 def run_dummy_server():
-    # Render автоматически передает нужный порт в переменную PORT, иначе используем 8000
     port = int(os.getenv("PORT", 8000))
     handler = http.server.SimpleHTTPRequestHandler
     socketserver.TCPServer.allow_reuse_address = True
